@@ -18,7 +18,7 @@ Domain Path: /languages
 add_action( 'woocommerce_product_options_general_product_data', 'add_custom_woocommerce_general_field_vendor_url' );
 
 // Save Fields
-add_action( 'woocommerce__process_product_meta', 'save_custom_woocommerce_general_field_vendor_url' );
+add_action( 'woocommerce_process_product_meta', 'save_custom_woocommerce_general_field_vendor_url' );
 
 function add_custom_woocommerce_general_field_vendor_url() {
 
