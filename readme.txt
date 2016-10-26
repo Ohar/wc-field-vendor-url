@@ -1,0 +1,1 @@
+Plugin just adds custom field “vendor_url” to WooCommerce products. No more, no less.
