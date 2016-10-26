@@ -6,7 +6,7 @@ Description:  Add custom field “vendor_url” to the WooCommerce products
 Author: Pavel Lysenko aka Ohar
 Author URI: http://ohar.name/
 Contributors: ohar
-Version: 1.0.2
+Version: 1.0.3
 License: MIT
 Text Domain: wc-field-vendor-url
 Domain Path: /languages
@@ -45,4 +45,10 @@ function save_custom_woocommerce_general_field_vendor_url( $post_id ) {
 	if (!empty( $vendor_url ) ) {
 		update_post_meta( $post_id, 'vendor_url', esc_attr( $vendor_url ) );
 	}
+}
+
+add_action( 'plugins_loaded', 'load_wc_field_vendor_url_textdomain' );
+
+function load_wc_field_vendor_url_textdomain() {
+	load_plugin_textdomain( 'truemisha', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
