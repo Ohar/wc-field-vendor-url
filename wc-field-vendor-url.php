@@ -50,5 +50,5 @@ function save_custom_woocommerce_general_field_vendor_url( $post_id ) {
 add_action( 'plugins_loaded', 'load_wc_field_vendor_url_textdomain' );
 
 function load_wc_field_vendor_url_textdomain() {
-	load_plugin_textdomain( 'truemisha', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'wc-field-vendor-url', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
