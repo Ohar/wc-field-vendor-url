@@ -42,10 +42,7 @@ function add_custom_woocommerce_general_field_vendor_url() {
 }
 
 function save_custom_woocommerce_general_field_vendor_url( $post_id ) {
-	$vendor_url = $_POST['vendor_url'];
-	if (!empty( $vendor_url ) ) {
-		update_post_meta( $post_id, 'vendor_url', esc_attr( $vendor_url ) );
-	}
+	update_post_meta( $post_id, 'vendor_url', esc_attr( $_POST['vendor_url'] ) );
 }
 
 add_action( 'plugins_loaded', 'load_wc_field_vendor_url_textdomain' );
