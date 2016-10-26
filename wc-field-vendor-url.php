@@ -6,19 +6,19 @@ Description:  Add custom field “vendor_url” to the WooCommerce products
 Author: Pavel Lysenko aka Ohar
 Author URI: http://ohar.name/
 Contributors: ohar
-Version: 1.0.0
+Version: 1.0.1
 License: MIT
 */
 
 // Inspired by http://www.remicorson.com/mastering-woocommerce-products-custom-fields/
 
 // Display Fields
-add_action( 'woocommerce_product_options_general_product_data', 'woo_add_custom_general_fields' );
+add_action( 'woocommerce_product_options_general_product_data', 'add_custom_woocommerce_general_field_vendor_url' );
 
 // Save Fields
-add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_save' );
+add_action( 'woocommerce__process_product_meta', 'save_custom_woocommerce_general_field_vendor_url' );
 
-function woo_add_custom_general_fields() {
+function add_custom_woocommerce_general_field_vendor_url() {
 
   global $woocommerce, $post;
 
@@ -38,7 +38,8 @@ function woo_add_custom_general_fields() {
 	echo '</div>';
 }
 
-$vendor_url = $_POST['vendor_url'];
+function save_custom_woocommerce_general_field_vendor_url( $post_id ) {
+	$vendor_url = $_POST['vendor_url'];
 	if (!empty( $vendor_url ) ) {
 		update_post_meta( $post_id, 'vendor_url', esc_attr( $vendor_url ) );
 	}
