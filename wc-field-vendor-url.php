@@ -31,6 +31,7 @@ function add_custom_woocommerce_general_field_vendor_url() {
 			'id'                => 'vendor_url',
 			'label'             => __( 'Vendor URL', 'wc-field-vendor-url' ),
 			'placeholder'       => 'http://example.com/item',
+			'desc_tip'          => 'true',
 			'description'       => __( 'URL of product on the vendor`s site', 'wc-field-vendor-url' ),
 			'type'              => 'url',
 			'data_type'         => 'url'
