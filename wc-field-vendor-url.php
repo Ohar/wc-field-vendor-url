@@ -8,6 +8,8 @@ Author URI: http://ohar.name/
 Contributors: ohar
 Version: 1.0.1
 License: MIT
+Text Domain: wc-field-vendor-url
+Domain Path: /languages
 */
 
 // Inspired by http://www.remicorson.com/mastering-woocommerce-products-custom-fields/
@@ -27,9 +29,9 @@ function add_custom_woocommerce_general_field_vendor_url() {
 	woocommerce_wp_text_input(
 		array(
 			'id'                => 'vendor_url',
-			'label'             => __( 'Vendor URL', 'woocommerce' ),
+			'label'             => __( 'Vendor URL', 'wc-field-vendor-url' ),
 			'placeholder'       => 'http://example.com/item',
-			'description'       => __( 'URL of product on the vendor`s site', 'woocommerce' ),
+			'description'       => __( 'URL of product on the vendor`s site', 'wc-field-vendor-url' ),
 			'type'              => 'url',
 			'data_type'         => 'url'
 		)
